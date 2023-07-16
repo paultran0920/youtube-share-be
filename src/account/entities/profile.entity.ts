@@ -5,13 +5,13 @@ import { AccountEntity } from './account.entity';
 
 @Entity({ name: 'profile' })
 export class ProfileEntity extends BaseEntity {
-  @ColumnText({ name: 'name' })
+  @ColumnText({ name: 'name', length: 255 })
   name: string;
 
-  @ColumnText({ name: 'contact' })
+  @ColumnText({ name: 'contact', length: 255 })
   contact: string;
 
-  @ColumnTextOptional({ name: 'avatar' })
+  @ColumnTextOptional({ name: 'avatar', length: 2048 })
   avatar?: string;
   // To store the avatar url in case needed
   avatarUrl?: string;

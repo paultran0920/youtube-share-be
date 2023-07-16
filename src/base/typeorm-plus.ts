@@ -2,10 +2,10 @@ import { Column, ColumnOptions } from 'typeorm';
 import { SortOrder } from './search-criteria';
 
 export const ColumnText = (options?: ColumnOptions): PropertyDecorator =>
-  Column({ type: 'text', ...options });
+  Column({ type: 'varchar', ...options });
 export const ColumnTextOptional = (
   options?: ColumnOptions,
-): PropertyDecorator => Column({ type: 'text', nullable: true, ...options });
+): PropertyDecorator => Column({ type: 'varchar', nullable: true, ...options });
 
 export const ColumnDateTime = (options?: ColumnOptions): PropertyDecorator =>
   Column({ type: 'datetime', ...options });

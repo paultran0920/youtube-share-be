@@ -11,7 +11,11 @@ import {
 import { Server, Socket } from 'socket.io';
 
 // Simplest websocket for DEMO
-@WebSocketGateway(3006)
+@WebSocketGateway({
+  cors: {
+    origin: 'http://localhost:3000',
+  },
+})
 export class AppGateway
   implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect
 {
@@ -45,6 +49,6 @@ export class AppGateway
     this.logger.debug({ sharedUrl }, 'AppGateway => A new URL shared');
     this.logger.debug('Broadcasting shared URL to all clients');
 
-    this.server.emit('shared-video', sharedUrl);
+    this.server.sockets.emit('shared-video', sharedUrl);
   }
 }

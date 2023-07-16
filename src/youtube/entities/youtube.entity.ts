@@ -4,21 +4,21 @@ import { Entity } from 'typeorm';
 
 @Entity({ name: 'youtube' })
 export class YoutubeEntity extends BaseEntity {
-  @ColumnText({ name: 'video_id' })
+  @ColumnText({ name: 'video_id', length: 255 })
   videoId: string;
 
-  @ColumnText({ name: 'url' })
+  @ColumnText({ name: 'url', length: 2048 })
   url: string;
 
-  @ColumnText({ name: 'title' })
+  @ColumnText({ name: 'title', length: 1000 })
   title: string;
 
-  @ColumnText({ name: 'description' })
+  @ColumnText({ name: 'description', length: 2000 })
   description: string;
 
-  @ColumnText({ name: 'owner' })
+  @ColumnText({ name: 'owner', length: 255 })
   owner: string;
 
-  @ColumnText({ name: 'thumbnail_url' })
+  @ColumnText({ name: 'thumbnail_url', length: 2048 })
   thumbnailUrl: string;
 }

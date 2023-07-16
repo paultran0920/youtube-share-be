@@ -6,16 +6,16 @@ import { ProfileEntity } from './profile.entity';
 
 @Entity({ name: 'account' })
 export class AccountEntity extends BaseEntity {
-  @ColumnText({ name: 'email' })
+  @ColumnText({ name: 'email', length: 255 })
   email: string;
 
-  @ColumnText({ name: 'password' })
+  @ColumnText({ name: 'password', length: 255 })
   password: string;
 
-  @ColumnText({ name: 'status' })
+  @ColumnText({ name: 'status', length: 255 })
   status: AccountStatus;
 
-  @ColumnText({ name: 'role' })
+  @ColumnText({ name: 'role', length: 255 })
   role: Role;
 
   @OneToOne(() => ProfileEntity, (profile) => profile.account)
