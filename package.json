@@ -27,7 +27,9 @@
     "@nestjs/mapped-types": "*",
     "@nestjs/passport": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "@nestjs/platform-socket.io": "^10.0.5",
     "@nestjs/typeorm": "^9.0.1",
+    "@nestjs/websockets": "^10.0.5",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.2",
     "lodash": "^4.17.21",
@@ -40,6 +42,7 @@
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
     "rxjs": "^7.2.0",
+    "socket.io": "^4.7.1",
     "typeorm": "^0.3.9",
     "updated-youtube-info": "^1.4.7"
   },

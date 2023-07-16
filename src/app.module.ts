@@ -3,6 +3,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AccountModule } from './account/account.module';
 import { AppConfig } from './app.config';
 import { AppController } from './app.controller';
+import { AppGatewayModule } from './appgateway/app.gateway.module';
 import { AuthModule } from './auth/auth.module';
 import { YoutubeModule } from './youtube/youtube.module';
 
@@ -22,6 +23,7 @@ import { YoutubeModule } from './youtube/youtube.module';
     AccountModule,
     AuthModule,
     YoutubeModule,
+    AppGatewayModule,
   ],
   controllers: [AppController],
   providers: [AppConfig, Logger],

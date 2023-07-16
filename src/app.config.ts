@@ -14,7 +14,6 @@ export class AppConfig {
 
   constructor() {
     if (
-      !this.PORT ||
       !this.JWT_KEY ||
       !this.DB_URL ||
       !this.USER_NAME ||
