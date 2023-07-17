@@ -5,8 +5,8 @@ import { toOrder, toSkip, toTotal } from 'src/base/typeorm-plus';
 import { DataSource, Like } from 'typeorm';
 import { YoutubeEntity } from './entities/youtube.entity';
 import { YoutubeRepository } from './youtube.repository';
-import * as fetchVideoInfo from 'updated-youtube-info';
 import { VideoInfoDto } from './dtos/video-info.dto';
+import { fetchVideoInfo } from './fetch.video.info';
 
 @Injectable()
 export class YoutubeService {
