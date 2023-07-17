@@ -13,7 +13,7 @@ import { Server, Socket } from 'socket.io';
 // Simplest websocket for DEMO
 @WebSocketGateway({
   cors: {
-    origin: 'http://localhost:3000',
+    origin: '*',
   },
 })
 export class AppGateway

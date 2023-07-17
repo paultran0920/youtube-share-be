@@ -19,7 +19,7 @@ import { YoutubeModule } from './youtube/youtube.module';
       database: process.env.DATABASE,
       autoLoadEntities: true,
       charset: 'utf8mb4',
-      synchronize: true,
+      synchronize: false,
     }),
     AccountModule,
     AuthModule,
