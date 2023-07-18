@@ -11,7 +11,7 @@ import { YoutubeModule } from './youtube/youtube.module';
   imports: [
     // Register with root then it will available for all module without re-import
     TypeOrmModule.forRoot({
-      type: 'mysql',
+      type: (process.env.DB_TYPE as any) ?? 'mysql',
       host: process.env.DB_URL,
       port: +process.env.DB_PORT,
       username: process.env.USER_NAME,

@@ -1,4 +1,5 @@
 // Test environment params
+process.env.DB_TYPE = 'sqlite';
 process.env.PORT = '13002';
 process.env.JWT_KEY = 'some-key';
 process.env.DB_URL = 'localhost';

@@ -6,8 +6,8 @@ export class CreateTables1689518313994 implements MigrationInterface {
       `
       CREATE TABLE account (
         id varchar(36) NOT NULL,
-        created_at timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
-        modified_at timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+        created_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        modified_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         email varchar(255) NOT NULL,
         password varchar(255) NOT NULL,
         status varchar(255) NOT NULL,
@@ -20,8 +20,8 @@ export class CreateTables1689518313994 implements MigrationInterface {
       `
       CREATE TABLE profile (
         id varchar(36) NOT NULL,
-        created_at timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
-        modified_at timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+        created_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        modified_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         name varchar(255) NOT NULL,
         contact varchar(255) NOT NULL,
         avatar varchar(2048) DEFAULT NULL,
@@ -36,8 +36,8 @@ export class CreateTables1689518313994 implements MigrationInterface {
       `
       CREATE TABLE youtube (
         id varchar(36) NOT NULL,
-        created_at timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
-        modified_at timestamp(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6) ON UPDATE CURRENT_TIMESTAMP(6),
+        created_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        modified_at datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
         video_id varchar(255) NOT NULL,
         url varchar(2048) NOT NULL,
         title varchar(1000) NOT NULL,

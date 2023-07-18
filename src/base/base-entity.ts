@@ -8,9 +8,9 @@ export class BaseEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
-  @CreateDateColumn({ name: 'created_at', type: 'timestamp' })
+  @CreateDateColumn({ name: 'created_at', type: 'datetime' })
   createdAt: Date;
 
-  @UpdateDateColumn({ name: 'modified_at', type: 'timestamp' })
+  @UpdateDateColumn({ name: 'modified_at', type: 'datetime' })
   modifiedAt: Date;
 }
